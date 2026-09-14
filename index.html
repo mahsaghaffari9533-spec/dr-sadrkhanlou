@@ -1,1189 +1,1063 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>مطب دکتر سمیرا صدرخانلو | فوق تخصص کودکان و استرابیسم</title>
 
   <meta
     name="description"
     content="مطب دکتر سمیرا صدرخانلو، فوق تخصص کودکان و استرابیسم در کرج. خدمات تخصصی انحراف چشم، چشم‌پزشکی کودکان، پتوز، بلفاروپلاستی و لیزیک."
-  >
-
-  <meta name="theme-color" content="#071a2d">
-
-  <meta property="og:title" content="مطب دکتر سمیرا صدرخانلو">
-  <meta property="og:description" content="فوق تخصص کودکان و استرابیسم">
-  <meta property="og:type" content="website">
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
-    href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <style>
-    :root{
-      --navy:#071a2d;
-      --navy2:#0d2942;
-      --blue:#167d91;
-      --cyan:#49c7c9;
-      --gold:#c8a96b;
-      --cream:#f7f8f6;
-      --white:#fff;
-      --text:#172735;
-      --muted:#687987;
-      --line:#dfe7e9;
-      --shadow:0 24px 70px rgba(5,25,40,.12);
-      --radius:24px;
+    :root {
+      --ink: #171714;
+      --ink-soft: #292925;
+      --ivory: #f7f3eb;
+      --cream: #eee8dc;
+      --gold: #b99a62;
+      --gold-light: #d7c18d;
+      --line: rgba(23, 23, 20, 0.13);
+      --white: #ffffff;
+      --muted: #77746d;
+      --green: #243c35;
+      --green-light: #34564b;
+      --shadow: 0 25px 80px rgba(0, 0, 0, 0.13);
+      --radius: 24px;
     }
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      font-family:"Estedad",Tahoma,sans-serif;
-      background:var(--cream);
-      color:var(--text);
-      line-height:1.9;
-      overflow-x:hidden;
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background: var(--ivory);
+      color: var(--ink);
+      line-height: 2;
+      overflow-x: hidden;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     button,
     input,
-    textarea{
-      font-family:inherit;
+    textarea {
+      font-family: inherit;
     }
 
-    /* ---------------- HEADER ---------------- */
-
-    header{
-      position:absolute;
-      top:0;
-      right:0;
-      left:0;
-      z-index:100;
-      padding:22px 5%;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .nav{
-      max-width:1250px;
-      margin:auto;
-      height:72px;
-      padding:0 22px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      background:rgba(5,25,42,.70);
-      border:1px solid rgba(255,255,255,.13);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-      border-radius:20px;
-      box-shadow:0 15px 45px rgba(0,0,0,.12);
+    .container {
+      width: min(1240px, calc(100% - 44px));
+      margin: auto;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:13px;
-      color:#fff;
-      min-width:max-content;
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: 0.35s ease;
     }
 
-    .brand-icon{
-      width:43px;
-      height:43px;
-      border:1px solid rgba(73,199,201,.6);
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      color:var(--cyan);
-      background:rgba(73,199,201,.08);
+    header.scrolled {
+      background: rgba(247, 243, 235, 0.93);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
     }
 
-    .brand-icon svg{
-      width:24px;
-      height:24px;
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 0 26px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(20, 22, 20, 0.38);
+      backdrop-filter: blur(18px);
+      border-radius: 100px;
     }
 
-    .brand-text strong{
-      display:block;
-      font-size:14px;
-      font-weight:700;
+    header.scrolled .nav {
+      background: rgba(255,255,255,0.72);
+      border-color: var(--line);
     }
 
-    .brand-text span{
-      display:block;
-      color:rgba(255,255,255,.58);
-      font-size:10px;
-      margin-top:-3px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-width: max-content;
     }
 
-    .menu{
-      display:flex;
-      align-items:center;
-      gap:25px;
-      color:rgba(255,255,255,.82);
-      font-size:13px;
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-light);
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
     }
 
-    .menu a{
-      position:relative;
-      transition:.25s;
+    header.scrolled .brand-mark {
+      color: var(--gold);
     }
 
-    .menu a:hover{
-      color:#fff;
+    .brand-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
     }
 
-    .menu a::after{
-      content:"";
-      position:absolute;
-      right:0;
-      bottom:-7px;
-      width:0;
-      height:2px;
-      border-radius:3px;
-      background:var(--cyan);
-      transition:.25s;
+    .brand-text span {
+      display: block;
+      font-size: 10px;
+      color: rgba(255,255,255,0.72);
+      letter-spacing: 0.5px;
     }
 
-    .menu a:hover::after{
-      width:100%;
+    header.scrolled .brand-text strong {
+      color: var(--ink);
     }
 
-    .nav-call{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      color:#fff;
-      font-size:12px;
-      border:1px solid rgba(255,255,255,.15);
-      padding:8px 13px;
-      border-radius:12px;
-      background:rgba(255,255,255,.06);
+    header.scrolled .brand-text span {
+      color: var(--muted);
     }
 
-    .nav-call svg{
-      width:17px;
-      height:17px;
-      color:var(--cyan);
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 27px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+      flex: 1;
     }
 
-    /* ---------------- HERO ---------------- */
+    header.scrolled .menu {
+      color: var(--ink);
+    }
 
-    .hero{
-      min-height:790px;
-      position:relative;
-      display:flex;
-      align-items:center;
-      overflow:hidden;
+    .menu a {
+      position: relative;
+      white-space: nowrap;
+      transition: 0.25s;
+    }
+
+    .menu a::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold-light);
+      transition: 0.3s;
+    }
+
+    .menu a:hover::after {
+      width: 100%;
+    }
+
+    .menu a:hover {
+      color: var(--gold-light);
+    }
+
+    header.scrolled .menu a:hover {
+      color: var(--gold);
+    }
+
+    .header-call {
+      min-width: max-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--gold-light);
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 100px;
+      font-size: 11px;
+    }
+
+    header.scrolled .header-call {
+      color: var(--ink);
+      border-color: var(--gold);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    header.scrolled .mobile-toggle {
+      color: var(--ink);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 850px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
       background:
         linear-gradient(
           90deg,
-          rgba(4,19,32,.94) 0%,
-          rgba(5,25,42,.82) 38%,
-          rgba(5,25,42,.48) 70%,
-          rgba(5,25,42,.32) 100%
+          rgba(12,15,13,0.93) 0%,
+          rgba(12,15,13,0.77) 43%,
+          rgba(12,15,13,0.32) 75%,
+          rgba(12,15,13,0.15) 100%
         ),
-        url("https://www.quironsalud.com/idcsalud-client/cm/images?idMmedia=3538942&locale=es_ES")
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2200&q=90")
         center/cover no-repeat;
     }
 
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background:
-        radial-gradient(circle at 75% 50%,rgba(73,199,201,.12),transparent 32%),
-        linear-gradient(to bottom,transparent 70%,var(--cream) 100%);
-      pointer-events:none;
+        radial-gradient(circle at 80% 45%, rgba(204,174,112,0.20), transparent 30%),
+        linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.42));
     }
 
-    .hero-inner{
-      width:min(1250px,90%);
-      margin:110px auto 0;
-      position:relative;
-      z-index:2;
-      display:grid;
-      grid-template-columns:1.35fr .65fr;
-      gap:80px;
-      align-items:center;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1240px, calc(100% - 44px));
+      margin: auto;
+      padding-top: 90px;
     }
 
-    .hero-copy{
-      color:#fff;
-      max-width:760px;
+    .hero-copy {
+      width: min(720px, 100%);
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:#a9e4e4;
-      font-size:13px;
-      margin-bottom:20px;
-      letter-spacing:.2px;
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 22px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
     }
 
-    .eyebrow::before{
-      content:"";
-      width:35px;
-      height:1px;
-      background:var(--cyan);
+    .eyebrow::before {
+      content: "";
+      width: 55px;
+      height: 1px;
+      background: var(--gold-light);
     }
 
-    .hero h1{
-      font-size:clamp(42px,6vw,78px);
-      line-height:1.15;
-      font-weight:800;
-      letter-spacing:-2px;
-      margin-bottom:18px;
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1.12;
+      font-weight: 500;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
     }
 
-    .hero h1 span{
-      display:block;
-      color:#a9e4e4;
-      font-size:.43em;
-      line-height:1.6;
-      letter-spacing:0;
-      font-weight:500;
+    .hero h1 span {
+      color: var(--gold-light);
+      font-weight: 700;
     }
 
-    .hero-subtitle{
-      color:rgba(255,255,255,.76);
-      font-size:18px;
-      max-width:650px;
-      margin-bottom:14px;
+    .hero-subtitle {
+      font-size: clamp(17px, 2vw, 23px);
+      font-weight: 300;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.92);
     }
 
-    .hero-slogan{
-      color:#fff;
-      font-size:14px;
-      font-weight:600;
-      margin-bottom:34px;
+    .hero-slogan {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 40px;
+      letter-spacing: 1px;
     }
 
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:13px;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
     }
 
-    .btn{
-      min-height:51px;
-      padding:0 22px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:9px;
-      border-radius:14px;
-      font-size:13px;
-      font-weight:600;
-      transition:.25s;
-      cursor:pointer;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border-radius: 100px;
+      border: 1px solid transparent;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
 
-    .btn svg{
-      width:18px;
-      height:18px;
+    .btn-gold {
+      background: var(--gold-light);
+      color: #171714;
     }
 
-    .btn-primary{
-      color:#05202b;
-      background:var(--cyan);
-      box-shadow:0 12px 30px rgba(73,199,201,.18);
+    .btn-gold:hover {
+      background: #ead9aa;
+      transform: translateY(-2px);
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 17px 35px rgba(73,199,201,.27);
+    .btn-outline {
+      border-color: rgba(255,255,255,0.5);
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(10px);
     }
 
-    .btn-outline{
-      color:#fff;
-      border:1px solid rgba(255,255,255,.28);
-      background:rgba(255,255,255,.06);
-      backdrop-filter:blur(10px);
+    .btn-outline:hover {
+      border-color: var(--gold-light);
+      color: var(--gold-light);
     }
 
-    .btn-outline:hover{
-      background:rgba(255,255,255,.12);
-      transform:translateY(-2px);
+    .hero-bottom {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      z-index: 2;
     }
 
-    .hero-card{
-      color:#fff;
-      padding:30px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(8,31,48,.60);
-      backdrop-filter:blur(20px);
-      border-radius:28px;
-      box-shadow:0 30px 70px rgba(0,0,0,.20);
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      padding-top: 17px;
+      font-size: 10px;
+      color: rgba(255,255,255,0.65);
     }
 
-    .hero-card-top{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:28px;
-    }
-
-    .hero-card-label{
-      font-size:11px;
-      color:rgba(255,255,255,.52);
-    }
-
-    .hero-card-mark{
-      width:38px;
-      height:38px;
-      border:1px solid rgba(200,169,107,.55);
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      color:var(--gold);
-    }
-
-    .hero-card-mark svg{
-      width:19px;
-      height:19px;
-    }
-
-    .hero-card h3{
-      font-size:22px;
-      margin-bottom:7px;
-    }
-
-    .hero-card p{
-      font-size:12px;
-      color:rgba(255,255,255,.64);
-      margin-bottom:25px;
-    }
-
-    .hero-card-line{
-      height:1px;
-      background:rgba(255,255,255,.10);
-      margin-bottom:22px;
-    }
-
-    .hero-card-item{
-      display:flex;
-      align-items:flex-start;
-      gap:12px;
-      margin-bottom:18px;
-      font-size:12px;
-    }
-
-    .hero-card-item svg{
-      width:18px;
-      height:18px;
-      flex:none;
-      color:var(--cyan);
-      margin-top:3px;
-    }
-
-    .hero-card-item span{
-      color:rgba(255,255,255,.72);
-    }
-
-    /* ---------------- GENERAL ---------------- */
-
-    section{
-      position:relative;
-    }
-
-    .section{
-      width:min(1180px,90%);
-      margin:auto;
-      padding:100px 0;
-    }
-
-    .section-head{
-      margin-bottom:45px;
-      max-width:700px;
-    }
+    /* =========================
+       INTRO
+    ========================= */
 
-    .section-kicker{
-      color:var(--blue);
-      font-size:12px;
-      font-weight:700;
-      margin-bottom:9px;
-      display:flex;
-      align-items:center;
-      gap:10px;
+    section {
+      padding: 120px 0;
     }
 
-    .section-kicker::before{
-      content:"";
-      width:28px;
-      height:2px;
-      background:var(--cyan);
+    .section-kicker {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .section-title{
-      font-size:clamp(28px,4vw,43px);
-      line-height:1.35;
-      color:var(--navy);
-      font-weight:800;
+    .section-title {
+      font-size: clamp(31px, 4vw, 52px);
+      line-height: 1.3;
+      font-weight: 600;
+      margin-bottom: 25px;
     }
 
-    .section-description{
-      color:var(--muted);
-      margin-top:12px;
-      font-size:14px;
+    .intro {
+      background: var(--ivory);
     }
 
-    /* ---------------- INTRO ---------------- */
-
-    .intro{
-      background:var(--cream);
-      margin-top:-10px;
-    }
-
-    .intro-panel{
-      min-height:260px;
-      padding:48px;
-      border-radius:32px;
-      background:#fff;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:130px 1fr;
-      gap:40px;
-      align-items:center;
-    }
-
-    .intro-number{
-      color:var(--gold);
-      font-size:70px;
-      font-weight:800;
-      line-height:1;
-      opacity:.65;
-    }
-
-    .intro-empty{
-      min-height:120px;
-      border-right:1px solid var(--line);
-      padding-right:35px;
-      display:flex;
-      align-items:center;
-      color:#a3afb4;
-      font-size:13px;
-    }
-
-    /* ---------------- SERVICES ---------------- */
-
-    .services-section{
-      background:#fff;
-    }
-
-    .services-list{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:15px;
-    }
-
-    .service{
-      min-height:275px;
-      position:relative;
-      padding:25px 22px;
-      border:1px solid var(--line);
-      border-radius:24px;
-      overflow:hidden;
-      background:#fff;
-      transition:.3s;
-    }
-
-    .service::before{
-      content:"";
-      position:absolute;
-      right:0;
-      top:0;
-      width:100%;
-      height:3px;
-      background:linear-gradient(90deg,var(--cyan),transparent);
-      opacity:.8;
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
     }
 
-    .service:hover{
-      transform:translateY(-7px);
-      border-color:#c6dfe2;
-      box-shadow:0 20px 45px rgba(10,55,70,.10);
+    .doctor-gallery {
+      position: relative;
+      min-height: 610px;
     }
 
-    .service-number{
-      color:#dce5e7;
-      font-size:38px;
-      font-weight:800;
-      line-height:1;
-      margin-bottom:30px;
+    .doctor-photo-main {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 72%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 180px 180px 24px 24px;
+      box-shadow: var(--shadow);
     }
 
-    .service-icon{
-      width:45px;
-      height:45px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      color:var(--blue);
-      background:#eef8f8;
-      margin-bottom:22px;
+    .doctor-photo-secondary {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 260px;
+      object-fit: cover;
+      border: 12px solid var(--ivory);
+      border-radius: 30px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.16);
     }
 
-    .service-icon svg{
-      width:22px;
-      height:22px;
+    .gold-circle {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      left: 20px;
+      top: 40px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      z-index: -1;
     }
 
-    .service h3{
-      font-size:16px;
-      color:var(--navy);
-      line-height:1.7;
+    .intro-copy {
+      padding-top: 20px;
     }
 
-    .service small{
-      display:block;
-      color:var(--muted);
-      font-size:11px;
-      margin-top:10px;
+    .intro-copy p {
+      color: #55524b;
+      font-size: 15px;
+      line-height: 2.4;
+      text-align: justify;
     }
 
-    /* ---------------- CARE ---------------- */
-
-    .care-section{
-      background:var(--navy);
-      color:#fff;
+    .doctor-signature {
+      margin-top: 35px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
     }
 
-    .care-section .section-title{
-      color:#fff;
+    .signature-name {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      color: var(--green);
     }
 
-    .care-section .section-kicker{
-      color:#a9e4e4;
+    .signature-title {
+      color: var(--muted);
+      font-size: 11px;
     }
 
-    .care-section .section-description{
-      color:rgba(255,255,255,.57);
-    }
+    /* =========================
+       SERVICES
+    ========================= */
 
-    .care-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
+    .services {
+      background: var(--green);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
     }
 
-    .care-card{
-      min-height:250px;
-      padding:35px;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:28px;
-      background:linear-gradient(
-        135deg,
-        rgba(255,255,255,.08),
-        rgba(255,255,255,.025)
-      );
-      position:relative;
-      overflow:hidden;
+    .services::before {
+      content: "CARE";
+      position: absolute;
+      left: -40px;
+      bottom: -75px;
+      font-family: "Playfair Display", serif;
+      font-size: 230px;
+      color: rgba(255,255,255,0.025);
     }
 
-    .care-card::after{
-      content:"";
-      position:absolute;
-      width:180px;
-      height:180px;
-      left:-70px;
-      bottom:-100px;
-      border-radius:50%;
-      border:1px solid rgba(73,199,201,.18);
+    .services-head {
+      max-width: 700px;
+      margin-bottom: 55px;
     }
 
-    .care-card-number{
-      color:var(--gold);
-      font-size:13px;
-      margin-bottom:45px;
+    .services .section-kicker {
+      color: var(--gold-light);
     }
 
-    .care-card h3{
-      font-size:18px;
-      color:#fff;
+    .services .section-title {
+      color: #fff;
     }
 
-    .care-card .blank-line{
-      margin-top:25px;
-      width:70%;
-      height:1px;
-      background:rgba(255,255,255,.13);
+    .services-intro {
+      color: rgba(255,255,255,0.62);
+      font-size: 14px;
     }
 
-    /* ---------------- Q&A ---------------- */
-
-    .qa-section{
-      background:var(--cream);
+    .service-list {
+      position: relative;
+      z-index: 1;
     }
 
-    .qa-layout{
-      display:grid;
-      grid-template-columns:.75fr 1.25fr;
-      gap:50px;
-      align-items:start;
+    .service-item {
+      display: grid;
+      grid-template-columns: 100px 1fr 70px;
+      gap: 30px;
+      align-items: center;
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.13);
+      transition: 0.3s;
     }
 
-    .qa-form{
-      padding:30px;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:25px;
-      box-shadow:0 15px 45px rgba(10,40,55,.06);
+    .service-item:last-child {
+      border-bottom: 1px solid rgba(255,255,255,0.13);
     }
 
-    .qa-form h3{
-      font-size:18px;
-      color:var(--navy);
-      margin-bottom:20px;
+    .service-item:hover {
+      padding-right: 15px;
+      padding-left: 15px;
+      background: rgba(255,255,255,0.025);
     }
 
-    .field{
-      margin-bottom:15px;
+    .service-number {
+      font-family: "Playfair Display", serif;
+      color: var(--gold-light);
+      font-size: 28px;
     }
 
-    .field label{
-      display:block;
-      font-size:11px;
-      color:var(--muted);
-      margin-bottom:7px;
+    .service-item h3 {
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
-    .field input,
-    .field textarea{
-      width:100%;
-      border:1px solid var(--line);
-      background:#fbfcfc;
-      border-radius:12px;
-      outline:none;
-      padding:12px 13px;
-      color:var(--text);
-      font-size:12px;
-      transition:.2s;
+    .service-item p {
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+      line-height: 2.2;
     }
 
-    .field input:focus,
-    .field textarea:focus{
-      border-color:var(--cyan);
-      box-shadow:0 0 0 3px rgba(73,199,201,.10);
+    .service-arrow {
+      width: 45px;
+      height: 45px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
     }
 
-    .field textarea{
-      min-height:120px;
-      resize:vertical;
-    }
+    /* =========================
+       POST OP
+    ========================= */
 
-    .qa-list{
-      display:flex;
-      flex-direction:column;
-      gap:13px;
+    .post-op {
+      background: #eee9df;
     }
 
-    .qa-empty{
-      min-height:260px;
-      border:1px dashed #cbd7da;
-      border-radius:25px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#8a999f;
-      background:rgba(255,255,255,.45);
+    .post-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 80px;
+      align-items: start;
     }
 
-    .qa-empty svg{
-      width:42px;
-      height:42px;
-      margin-bottom:15px;
-      color:#b2c5c8;
+    .post-intro {
+      position: sticky;
+      top: 120px;
     }
 
-    .qa-empty strong{
-      font-size:14px;
-      color:#607177;
+    .post-intro p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2.3;
     }
 
-    .qa-empty span{
-      font-size:11px;
-      margin-top:5px;
+    .post-list {
+      display: grid;
+      gap: 18px;
     }
 
-    .question{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:22px;
+    .post-card {
+      background: rgba(255,255,255,0.68);
+      border: 1px solid var(--line);
+      padding: 28px;
+      border-radius: 18px;
+      transition: 0.3s;
     }
 
-    .question-name{
-      color:var(--blue);
-      font-size:11px;
-      font-weight:700;
-      margin-bottom:7px;
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
     }
 
-    .question-text{
-      font-size:13px;
-      color:var(--text);
+    .post-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--green);
     }
 
-    .pending{
-      display:inline-block;
-      margin-top:12px;
-      font-size:9px;
-      color:#92733c;
-      background:#faf4e8;
-      padding:4px 8px;
-      border-radius:8px;
+    .post-card p {
+      color: var(--muted);
+      font-size: 12px;
     }
 
-    /* ---------------- GALLERY ---------------- */
+    /* =========================
+       FAQ
+    ========================= */
 
-    .gallery-section{
-      background:#fff;
+    .faq {
+      background: var(--ivory);
     }
 
-    .gallery-placeholder{
-      min-height:420px;
-      border-radius:32px;
-      border:1px solid var(--line);
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(135deg,#f0f7f7,#fafafa);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 80px;
     }
 
-    .gallery-placeholder::before,
-    .gallery-placeholder::after{
-      content:"";
-      position:absolute;
-      border:1px solid rgba(22,125,145,.10);
-      border-radius:50%;
+    .faq-intro p {
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .gallery-placeholder::before{
-      width:480px;
-      height:480px;
+    .faq-list {
+      border-top: 1px solid var(--line);
     }
 
-    .gallery-placeholder::after{
-      width:280px;
-      height:280px;
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0;
     }
 
-    .gallery-inner{
-      position:relative;
-      z-index:2;
-      text-align:center;
-      color:#7d8c91;
+    .faq-q {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    .gallery-inner svg{
-      width:55px;
-      height:55px;
-      color:#9ab9bd;
-      margin-bottom:15px;
+    .faq-a {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 2;
     }
 
-    .gallery-inner strong{
-      display:block;
-      color:#53666d;
-      font-size:15px;
+    .question-form {
+      margin-top: 35px;
+      display: grid;
+      gap: 12px;
     }
 
-    .gallery-inner span{
-      display:block;
-      margin-top:5px;
-      font-size:11px;
+    .field {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 13px 15px;
+      outline: none;
+      font-size: 12px;
+      transition: 0.2s;
     }
 
-    /* ---------------- CONTACT ---------------- */
-
-    .contact-section{
-      background:#f1f5f4;
+    .field:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(185,154,98,0.1);
     }
 
-    .contact-layout{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:25px;
+    textarea.field {
+      min-height: 125px;
+      resize: vertical;
     }
 
-    .contact-main{
-      padding:38px;
-      background:var(--navy);
-      color:#fff;
-      border-radius:30px;
-      min-height:470px;
-      position:relative;
-      overflow:hidden;
-    }
+    /* =========================
+       GALLERY
+    ========================= */
 
-    .contact-main::before{
-      content:"";
-      position:absolute;
-      width:330px;
-      height:330px;
-      border-radius:50%;
-      border:1px solid rgba(73,199,201,.13);
-      left:-160px;
-      bottom:-170px;
+    .gallery {
+      background: var(--ink);
+      color: #fff;
     }
 
-    .contact-main h2{
-      font-size:27px;
-      margin-bottom:12px;
-      position:relative;
+    .gallery-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 45px;
     }
 
-    .contact-main > p{
-      color:rgba(255,255,255,.58);
-      font-size:12px;
-      max-width:430px;
-      margin-bottom:32px;
-      position:relative;
+    .gallery .section-kicker {
+      color: var(--gold-light);
     }
 
-    .address{
-      display:flex;
-      gap:13px;
-      align-items:flex-start;
-      position:relative;
-      margin-bottom:25px;
+    .gallery .section-title {
+      color: #fff;
     }
 
-    .address svg{
-      width:20px;
-      height:20px;
-      color:var(--cyan);
-      flex:none;
-      margin-top:4px;
+    .gallery-note {
+      max-width: 350px;
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
     }
 
-    .address span{
-      font-size:12px;
-      color:rgba(255,255,255,.75);
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      grid-template-rows: 250px 250px;
+      gap: 14px;
     }
 
-    .map-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      padding:11px 15px;
-      border:1px solid rgba(73,199,201,.35);
-      border-radius:12px;
-      color:#b7eeee;
-      background:rgba(73,199,201,.07);
-      font-size:11px;
-      position:relative;
-      transition:.2s;
+    .gallery-box {
+      position: relative;
+      overflow: hidden;
+      background: #22221f;
+      border-radius: 5px;
     }
 
-    .map-btn:hover{
-      background:rgba(73,199,201,.14);
+    .gallery-box:first-child {
+      grid-row: 1 / 3;
     }
 
-    .map-btn svg{
-      width:17px;
-      height:17px;
+    .gallery-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.6s ease;
+      opacity: 0.92;
     }
 
-    .hours{
-      padding:38px;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:30px;
-      min-height:470px;
+    .gallery-box:hover img {
+      transform: scale(1.05);
     }
 
-    .hours h3{
-      color:var(--navy);
-      font-size:18px;
-      margin-bottom:8px;
+    .gallery-placeholder {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      padding: 20px;
+      font-size: 12px;
     }
 
-    .hours > p{
-      color:var(--muted);
-      font-size:11px;
-      margin-bottom:25px;
-    }
+    /* =========================
+       CONTACT
+    ========================= */
 
-    .hours-table{
-      width:100%;
-      border-collapse:collapse;
-      margin-bottom:25px;
+    .contact {
+      background: var(--ivory);
     }
 
-    .hours-table tr{
-      border-bottom:1px solid #edf1f2;
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: stretch;
     }
 
-    .hours-table td{
-      padding:13px 0;
-      font-size:11px;
-      vertical-align:top;
+    .contact-info {
+      padding: 10px 0;
     }
 
-    .hours-table td:first-child{
-      color:#64767d;
+    .contact-info > p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 32px;
     }
 
-    .hours-table td:last-child{
-      text-align:left;
-      color:var(--navy);
-      font-weight:600;
+    .hours {
+      border-top: 1px solid var(--line);
     }
 
-    .closed{
-      color:#a06e63 !important;
+    .hours-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
     }
 
-    .phone-btn{
-      width:100%;
-      min-height:56px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:10px;
-      color:#fff;
-      background:var(--blue);
-      border-radius:14px;
-      font-size:13px;
-      font-weight:700;
-      transition:.2s;
+    .hours-row span:last-child {
+      color: var(--muted);
+      text-align: left;
     }
 
-    .phone-btn:hover{
-      transform:translateY(-2px);
-      background:#116b7b;
+    .contact-links {
+      margin-top: 30px;
+      display: grid;
+      gap: 12px;
     }
 
-    .phone-btn svg{
-      width:19px;
-      height:19px;
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
     }
 
-    .social{
-      margin-top:17px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      color:#65777d;
-      font-size:11px;
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--gold);
     }
 
-    .instagram{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      color:var(--navy);
-      font-weight:700;
+    .map-wrap {
+      min-height: 500px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 10px solid #fff;
+      background: #ddd;
     }
 
-    .instagram svg{
-      width:18px;
-      height:18px;
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      border: 0;
     }
 
-    /* ---------------- FOOTER ---------------- */
+    /* =========================
+       FOOTER
+    ========================= */
 
-    footer{
-      background:#04121f;
-      color:rgba(255,255,255,.55);
-      padding:35px 5%;
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.65);
+      padding: 35px 0;
     }
 
-    .footer-inner{
-      max-width:1180px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      font-size:10px;
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 10px;
     }
 
-    .footer-name{
-      color:#fff;
-      font-weight:700;
+    .footer-name {
+      color: #fff;
+      font-weight: 600;
     }
 
-    /* ---------------- MOBILE ---------------- */
-
-    .mobile-menu{
-      display:none;
-      color:#fff;
-      background:none;
-      border:0;
-      cursor:pointer;
-    }
-
-    .mobile-menu svg{
-      width:27px;
-      height:27px;
-    }
+    /* =========================
+       MOBILE
+    ========================= */
 
-    @media(max-width:1050px){
-      .menu{
-        gap:15px;
-        font-size:11px;
+    @media (max-width: 1000px) {
+      .menu {
+        gap: 14px;
+        font-size: 10px;
       }
 
-      .services-list{
-        grid-template-columns:repeat(3,1fr);
+      .intro-layout,
+      .post-layout,
+      .faq-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
       }
 
-      .hero-inner{
-        grid-template-columns:1fr;
-        gap:35px;
+      .post-intro {
+        position: static;
       }
 
-      .hero-card{
-        display:none;
+      .doctor-gallery {
+        min-height: 560px;
+        max-width: 650px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 220px 220px;
+      }
+
+      .gallery-box:first-child {
+        grid-row: auto;
+        grid-column: 1 / 3;
       }
     }
 
-    @media(max-width:760px){
-      header{
-        padding:14px 4%;
+    @media (max-width: 760px) {
+      .container,
+      .hero-content {
+        width: min(100% - 28px, 1240px);
       }
 
-      .nav{
-        height:64px;
-        padding:0 15px;
+      header {
+        padding: 10px 0;
       }
 
-      .menu,
-      .nav-call{
-        display:none;
+      .nav {
+        height: 64px;
+        padding: 0 17px;
       }
 
-      .mobile-menu{
-        display:block;
+      .brand-text span {
+        display: none;
       }
 
-      .hero{
-        min-height:760px;
-        background-position:63% center;
+      .brand-text strong {
+        font-size: 11px;
       }
 
-      .hero-inner{
-        width:88%;
-        margin-top:95px;
+      .brand-mark {
+        width: 39px;
+        height: 39px;
       }
 
-      .hero h1{
-        font-size:43px;
-        letter-spacing:-1px;
+      .menu {
+        display: none;
+        position: absolute;
+        top: 76px;
+        right: 14px;
+        left: 14px;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px;
+        background: rgba(247,243,235,0.98);
+        color: var(--ink);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
       }
 
-      .hero-subtitle{
-        font-size:15px;
+      .menu.open {
+        display: flex;
       }
 
-      .hero-slogan{
-        font-size:12px;
+      .menu a {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
       }
 
-      .hero-actions{
-        flex-direction:column;
-        align-items:stretch;
+      .menu a::after {
+        display: none;
       }
 
-      .btn{
-        width:100%;
+      .header-call {
+        display: none;
       }
 
-      .section{
-        width:88%;
-        padding:75px 0;
+      .mobile-toggle {
+        display: block;
       }
 
-      .intro-panel{
-        padding:30px;
-        grid-template-columns:1fr;
-        gap:15px;
+      .hero {
+        min-height: 780px;
       }
 
-      .intro-number{
-        font-size:45px;
+      .hero h1 {
+        font-size: 43px;
       }
 
-      .intro-empty{
-        border-right:0;
-        border-top:1px solid var(--line);
-        padding-right:0;
-        padding-top:20px;
+      .hero-bottom {
+        bottom: 20px;
       }
 
-      .services-list{
-        grid-template-columns:1fr;
+      .hero-meta {
+        font-size: 8px;
       }
 
-      .service{
-        min-height:220px;
+      section {
+        padding: 80px 0;
       }
 
-      .care-grid,
-      .qa-layout,
-      .contact-layout{
-        grid-template-columns:1fr;
+      .doctor-gallery {
+        min-height: 500px;
       }
 
-      .care-card{
-        min-height:210px;
+      .doctor-photo-main {
+        width: 82%;
+        height: 410px;
       }
 
-      .gallery-placeholder{
-        min-height:300px;
+      .doctor-photo-secondary {
+        width: 55%;
+        height: 220px;
       }
 
-      .contact-main,
-      .hours{
-        min-height:auto;
+      .service-item {
+        grid-template-columns: 55px 1fr;
+        gap: 15px;
       }
 
-      .footer-inner{
-        flex-direction:column;
-        text-align:center;
-      }
-    }
-
-    @media(max-width:400px){
-      .hero h1{
-        font-size:37px;
+      .service-arrow {
+        display: none;
       }
 
-      .brand-text strong{
-        font-size:12px;
+      .service-item h3 {
+        font-size: 17px;
       }
 
-      .brand-text span{
-        font-size:9px;
+      .service-item p {
+        font-size: 11px;
+      }
+
+      .gallery-head {
+        display: block;
+      }
+
+      .gallery-note {
+        margin-top: 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .gallery-box,
+      .gallery-box:first-child {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 280px;
+      }
+
+      .hours-row {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+
+      .hours-row span:last-child {
+        text-align: right;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
@@ -1191,527 +1065,83 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav">
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-      <a href="#intro" class="brand">
-        <span class="brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
-        </span>
+  <header id="header">
+    <div class="container">
+      <nav class="nav">
 
-        <span class="brand-text">
-          <strong>مطب دکتر سمیرا صدرخانلو</strong>
-          <span>کودکان و استرابیسم</span>
-        </span>
-      </a>
+        <a href="#intro" class="brand">
+          <div class="brand-mark">S</div>
 
-      <div class="menu">
-        <a href="#intro">معرفی</a>
-        <a href="#services">خدمات</a>
-        <a href="#care">مراقبت‌های بعد از جراحی</a>
-        <a href="#questions">پرسش و پاسخ</a>
-        <a href="#gallery">گالری تصاویر</a>
-        <a href="#contact">تماس با ما</a>
-      </div>
+          <div class="brand-text">
+            <strong>دکتر سمیرا صدرخانلو</strong>
+            <span>فوق تخصص کودکان و استرابیسم</span>
+          </div>
+        </a>
 
-      <a href="tel:09306630185" class="nav-call">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/>
-        </svg>
-        تماس با مطب
-      </a>
+        <div class="menu" id="menu">
+          <a href="#intro">معرفی</a>
+          <a href="#services">خدمات</a>
+          <a href="#postop">مراقبت‌های بعد از جراحی</a>
+          <a href="#faq">پرسش و پاسخ</a>
+          <a href="#gallery">گالری تصاویر</a>
+          <a href="#contact">تماس با ما</a>
+        </div>
 
-      <button class="mobile-menu" id="mobileMenu" aria-label="باز کردن منو">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-          <path d="M4 7h16M4 12h16M4 17h16"/>
-        </svg>
-      </button>
+        <a class="header-call" href="tel:09306630185">
+          تماس با مطب
+        </a>
 
-    </nav>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="منو">
+          ☰
+        </button>
+
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
 
-    <div class="hero-inner">
+  <!-- =========================
+       HERO
+  ========================== -->
 
-      <div class="hero-copy">
+  <main>
 
-        <div class="eyebrow">
-          چشم‌پزشکی تخصصی کودکان
-        </div>
+    <section class="hero">
 
-        <h1>
-          دکتر سمیرا صدرخانلو
-          <span>فوق تخصص کودکان و استرابیسم</span>
-        </h1>
+      <div class="hero-content">
 
-        <p class="hero-subtitle">
-          تشخیص دقیق و درمان تخصصی مشکلات چشمی کودکان و بزرگسالان
-          با رویکردی دقیق، ظریف و حرفه‌ای.
-        </p>
+        <div class="hero-copy">
 
-        <p class="hero-slogan">
-          «دقت در نگاه، ظرافت در درمان»
-        </p>
-
-        <div class="hero-actions">
-
-          <a href="#services" class="btn btn-primary">
-            مشاهده خدمات
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
-          </a>
-
-          <a href="tel:09306630185" class="btn btn-outline">
-            تماس با مطب
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/>
-            </svg>
-          </a>
-
-        </div>
-
-      </div>
-
-      <aside class="hero-card">
-
-        <div class="hero-card-top">
-          <span class="hero-card-label">اطلاعات مطب</span>
-
-          <span class="hero-card-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/>
-              <circle cx="12" cy="9" r="2.4"/>
-            </svg>
-          </span>
-        </div>
-
-        <h3>کرج</h3>
-
-        <p>جهت هماهنگی و دریافت وقت با مطب تماس حاصل فرمایید.</p>
-
-        <div class="hero-card-line"></div>
-
-        <div class="hero-card-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/>
-            <circle cx="12" cy="9" r="2.4"/>
-          </svg>
-          <span>
-            خیابان شهید بهشتی، نرسیده به خیابان کسری، جنب نساجی بروجرد
-          </span>
-        </div>
-
-        <div class="hero-card-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/>
-          </svg>
-          <span>۰۹۳۰۶۶۳۰۱۸۵</span>
-        </div>
-
-      </aside>
-
-    </div>
-  </section>
-
-
-  <!-- INTRO -->
-  <section class="intro" id="intro">
-
-    <div class="section">
-
-      <div class="section-head">
-        <div class="section-kicker">معرفی</div>
-        <h2 class="section-title">معرفی پزشک</h2>
-      </div>
-
-      <div class="intro-panel">
-
-        <div class="intro-number">01</div>
-
-        <div class="intro-empty">
-          بخش معرفی پزشک در حال تکمیل است.
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-  <section class="services-section" id="services">
-
-    <div class="section">
-
-      <div class="section-head">
-        <div class="section-kicker">خدمات تخصصی</div>
-        <h2 class="section-title">خدمات و زمینه‌های درمانی</h2>
-        <p class="section-description">
-          ارائه خدمات تخصصی در زمینه چشم‌پزشکی کودکان، استرابیسم و جراحی‌های مرتبط.
-        </p>
-      </div>
-
-      <div class="services-list">
-
-        <article class="service">
-
-          <div class="service-number">01</div>
-
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
+          <div class="eyebrow">
+            OPHTHALMOLOGY • STRABISMUS
           </div>
 
-          <h3>انحراف چشم (استرابیسم)</h3>
-          <small>تشخیص و درمان تخصصی</small>
+          <h1>
+            دقت در نگاه،
+            <br />
+            <span>ظرافت در درمان</span>
+          </h1>
 
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">02</div>
-
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <circle cx="12" cy="7" r="3"/>
-              <path d="M5 21c.7-4.1 3-6 7-6s6.3 1.9 7 6"/>
-            </svg>
+          <div class="hero-subtitle">
+            دکتر سمیرا صدرخانلو
           </div>
 
-          <h3>کودکان</h3>
-          <small>چشم‌پزشکی تخصصی کودکان</small>
-
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">03</div>
-
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="M4 9c2-3 5-4.5 8-4.5S18 6 20 9"/>
-              <path d="M5 9.5c.8 5 3.2 7.5 7 7.5s6.2-2.5 7-7.5"/>
-            </svg>
+          <div class="hero-slogan">
+            فوق تخصص کودکان و استرابیسم
           </div>
 
-          <h3>پتوز (افتادگی پلک)</h3>
-          <small>بررسی و درمان افتادگی پلک</small>
+          <div class="hero-actions">
 
-        </article>
+            <a href="#services" class="btn btn-gold">
+              مشاهده خدمات
+            </a>
 
-
-        <article class="service">
-
-          <div class="service-number">04</div>
-
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="M4 10c1.8-2.7 4.5-4 8-4s6.2 1.3 8 4"/>
-              <path d="M4 14c1.8 2.7 4.5 4 8 4s6.2-1.3 8-4"/>
-              <path d="M8 10v4M16 10v4"/>
-            </svg>
-          </div>
-
-          <h3>بلفاروپلاستی (جراحی پلک)</h3>
-          <small>جراحی تخصصی پلک</small>
-
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">05</div>
-
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <circle cx="12" cy="12" r="8"/>
-              <path d="M8 12h8M12 8v8"/>
-            </svg>
-          </div>
-
-          <h3>لیزیک (حذف عینک)</h3>
-          <small>بررسی شرایط جراحی حذف عینک</small>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CARE -->
-  <section class="care-section" id="care">
-
-    <div class="section">
-
-      <div class="section-head">
-        <div class="section-kicker">مراقبت‌های پس از جراحی</div>
-        <h2 class="section-title">مراقبت‌های بعد از جراحی</h2>
-        <p class="section-description">
-          راهنمای مراقبت پس از جراحی در این بخش قرار خواهد گرفت.
-        </p>
-      </div>
-
-      <div class="care-grid">
-
-        <article class="care-card">
-          <div class="care-card-number">۰۱ / مراقبت پس از عمل</div>
-          <h3>مراقبت‌های بعد از جراحی انحراف چشم</h3>
-          <div class="blank-line"></div>
-        </article>
-
-        <article class="care-card">
-          <div class="care-card-number">۰۲ / مراقبت پس از عمل</div>
-          <h3>مراقبت‌های بعد از جراحی بلفاروپلاستی</h3>
-          <div class="blank-line"></div>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- QUESTIONS -->
-  <section class="qa-section" id="questions">
-
-    <div class="section">
-
-      <div class="section-head">
-        <div class="section-kicker">ارتباط با پزشک</div>
-        <h2 class="section-title">پرسش و پاسخ</h2>
-        <p class="section-description">
-          سؤال خود را ثبت کنید. پرسش‌ها پس از بررسی و تأیید نمایش داده خواهند شد.
-        </p>
-      </div>
-
-      <div class="qa-layout">
-
-        <form class="qa-form" id="questionForm">
-
-          <h3>ثبت پرسش جدید</h3>
-
-          <div class="field">
-            <label for="questionName">نام</label>
-            <input
-              id="questionName"
-              type="text"
-              placeholder="نام خود را وارد کنید"
-              required
-            >
-          </div>
-
-          <div class="field">
-            <label for="questionText">پرسش شما</label>
-            <textarea
-              id="questionText"
-              placeholder="سؤال خود را بنویسید..."
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">
-            ثبت پرسش
-          </button>
-
-        </form>
-
-
-        <div class="qa-list" id="qaList">
-
-          <div class="qa-empty" id="qaEmpty">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21 11.5a8.38 8.38 0 0 1-9 8.3 8.4 8.4 0 0 1-3.8-.9L3 20l1.1-4.9A8.4 8.4 0 1 1 21 11.5Z"/>
-              <path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"/>
-            </svg>
-
-            <strong>هنوز پرسشی ثبت نشده است</strong>
-            <span>اولین سؤال را شما ثبت کنید.</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- GALLERY -->
-  <section class="gallery-section" id="gallery">
-
-    <div class="section">
-
-      <div class="section-head">
-        <div class="section-kicker">گالری</div>
-        <h2 class="section-title">گالری تصاویر</h2>
-        <p class="section-description">
-          تصاویر مطب، محیط درمان و فعالیت‌های حرفه‌ای پزشک در این قسمت قرار می‌گیرند.
-        </p>
-      </div>
-
-      <div class="gallery-placeholder">
-
-        <div class="gallery-inner">
-
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-            <rect x="3" y="4" width="18" height="16" rx="2"/>
-            <circle cx="8.5" cy="9" r="1.5"/>
-            <path d="m21 15-4.5-4.5L7 20"/>
-          </svg>
-
-          <strong>گالری تصاویر مطب</strong>
-          <span>تصاویر واقعی در این بخش قرار خواهند گرفت.</span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact">
-
-    <div class="section">
-
-      <div class="section-head">
-        <div class="section-kicker">تماس با ما</div>
-        <h2 class="section-title">اطلاعات تماس و ساعات پاسخگویی</h2>
-      </div>
-
-      <div class="contact-layout">
-
-
-        <div class="contact-main">
-
-          <h2>مطب دکتر سمیرا صدرخانلو</h2>
-
-          <p>
-            جهت هماهنگی و دریافت وقت، لطفاً در ساعات پاسخگویی با شماره مطب تماس حاصل فرمایید.
-          </p>
-
-          <div class="address">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/>
-              <circle cx="12" cy="9" r="2.4"/>
-            </svg>
-
-            <span>
-              کرج، خیابان شهید بهشتی، نرسیده به خیابان کسری،
-              جنب نساجی بروجرد، ساختمان ولیعهدی،
-              طبقه پنجم، واحد ۵۰۱
-            </span>
-
-          </div>
-
-
-          <a
-            class="map-btn"
-            href="https://www.google.com/maps/search/?api=1&query=کرج+خیابان+شهید+بهشتی+ساختمان+ولیعهدی"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/>
-              <circle cx="12" cy="9" r="2.4"/>
-            </svg>
-
-            مشاهده موقعیت مطب روی نقشه
-
-          </a>
-
-        </div>
-
-
-        <div class="hours">
-
-          <h3>
-            جهت رزرو وقت، در ساعات زیر با شماره درج‌شده تماس حاصل فرمایید:
-          </h3>
-
-          <p>
-            لطفاً برای هماهنگی مراجعه، در ساعات پاسخگویی تماس بگیرید.
-          </p>
-
-
-          <table class="hours-table">
-
-            <tr>
-              <td>روزهای غیر تعطیل — صبح‌ها</td>
-              <td>از ساعت ۸ تا ۱۲</td>
-            </tr>
-
-            <tr>
-              <td>روزهای غیر تعطیل — عصرها</td>
-              <td>از ساعت ۱۵ تا ۲۰</td>
-            </tr>
-
-            <tr>
-              <td>پنجشنبه‌ها</td>
-              <td>از ساعت ۸ تا ۱۲</td>
-            </tr>
-
-            <tr>
-              <td>جمعه‌ها و ایام تعطیل</td>
-              <td class="closed">پاسخگویی نداریم</td>
-            </tr>
-
-          </table>
-
-
-          <a href="tel:09306630185" class="phone-btn">
-
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/>
-            </svg>
-
-            تماس با شماره ۰۹۳۰۶۶۳۰۱۸۵
-
-          </a>
-
-
-          <div class="social">
-
-            <span>اینستاگرام:</span>
-
-            <a
-              class="instagram"
-              href="https://www.instagram.com/dr.sadrkhanlou/"
-              target="_blank"
-              rel="noopener"
-            >
-
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-                <rect x="3" y="3" width="18" height="18" rx="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.4" cy="6.7" r=".8" fill="currentColor" stroke="none"/>
-              </svg>
-
-              dr.sadrkhanlou
-
+            <a href="tel:09306630185" class="btn btn-outline">
+              تماس با مطب
             </a>
 
           </div>
@@ -1720,24 +1150,643 @@
 
       </div>
 
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="footer-inner">
-
-      <div>
-        © <span id="year"></span>
-        <span class="footer-name">مطب دکتر سمیرا صدرخانلو</span>
-        — تمامی حقوق محفوظ است.
+      <div class="hero-bottom">
+        <div class="container">
+          <div class="hero-meta">
+            <span>کرج • ساختمان ولیعهدی • طبقه پنجم</span>
+            <span>مطب دکتر سمیرا صدرخانلو</span>
+          </div>
+        </div>
       </div>
 
-      <div>
-        فوق تخصص کودکان و استرابیسم
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro" id="intro">
+
+      <div class="container">
+
+        <div class="intro-layout">
+
+          <div class="doctor-gallery">
+
+            <div class="gold-circle"></div>
+
+            <img
+              src="IMG_3385.jpeg"
+              alt="دکتر سمیرا صدرخانلو"
+              class="doctor-photo-main"
+            />
+
+            <img
+              src="IMG_3386.jpeg"
+              alt="دکتر سمیرا صدرخانلو"
+              class="doctor-photo-secondary"
+            />
+
+          </div>
+
+
+          <div class="intro-copy">
+
+            <div class="section-kicker">
+              ABOUT THE DOCTOR
+            </div>
+
+            <h2 class="section-title">
+              معرفی پزشک
+            </h2>
+
+            <p>
+              خانم دكتر سمیرا صدرخانلو در سال ۱۳۵۶ در شهررشت متولد شد.
+              وی پس از اتمام تحصیلات خود در مقطع دكتراي عمومي در دانشگاه تبریز
+              در سال ۱۳۸۱ مدرك تخصص چشم ‌پزشکی خود را از دانشگاه زاهدان در سال
+              ۱۳۸۷ و فوق تخصصص استرابیسم از دانشگاه تهران در سال۱۳۹۶ اخذ كرد.
+              دکتر سمیرا صدرخانلو با گذراندن دوران طرح خدمت پزشکی خود در استان
+              آذربایجان غربی فعالیت حرفه‌ای خود را از سال ۱۳۸۷ آغاز کرد.
+              دکتر سمیرا صدرخانلو خدمات کودکان، استرابیسم(انحراف چشم)، اوربیت
+              و مجاری اشکی، بلفاروپلاستی، پتوز یا افتادگی پلک و اصلاح عیوب
+              انکساری(ليزيك)، را انجام می‌دهد.
+            </p>
+
+            <div class="doctor-signature">
+
+              <div>
+                <div class="signature-name">
+                  Dr. Samira Sadrkhanlou
+                </div>
+
+                <div class="signature-title">
+                  فوق تخصص کودکان و استرابیسم
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <div class="services-head">
+
+          <div class="section-kicker">
+            SPECIALIZED CARE
+          </div>
+
+          <h2 class="section-title">
+            خدمات تخصصی چشم‌پزشکی
+          </h2>
+
+          <p class="services-intro">
+            ارائه خدمات تشخیصی، درمانی و جراحی در حوزه چشم‌پزشکی کودکان،
+            استرابیسم و بیماری‌های پلک با رویکردی دقیق و متناسب با شرایط هر بیمار.
+          </p>
+
+        </div>
+
+
+        <div class="service-list">
+
+          <article class="service-item">
+
+            <div class="service-number">01</div>
+
+            <div>
+              <h3>انحراف چشم (استرابیسم)</h3>
+
+              <p>
+                استرابیسم یا انحراف چشم به حالتی گفته می‌شود که محور دید دو چشم
+                در یک راستا قرار نداشته باشد. این اختلال می‌تواند به صورت
+                دائمی یا متناوب و به شکل انحراف به داخل، خارج، بالا یا پایین
+                دیده شود. بررسی دقیق وضعیت حرکات چشم، دید هر دو چشم و عملکرد
+                دید دوچشمی در تعیین روش درمان اهمیت دارد.
+              </p>
+            </div>
+
+            <div class="service-arrow">←</div>
+
+          </article>
+
+
+          <article class="service-item">
+
+            <div class="service-number">02</div>
+
+            <div>
+              <h3>کودکان</h3>
+
+              <p>
+                دوران کودکی مرحله‌ای بسیار مهم در تکامل بینایی است. کودکان تا
+                ۱۴ سالگی می‌توانند برای هرگونه مشکل مرتبط با چشم و بینایی به
+                پزشک مراجعه کنند. تنبلی چشم، انحراف چشم، عیوب انکساری،
+                دوبینی، اختلالات حرکات چشم، پتوز و سایر مشکلات چشمی کودکان
+                از مواردی هستند که نیازمند ارزیابی دقیق و به‌موقع هستند.
+              </p>
+            </div>
+
+            <div class="service-arrow">←</div>
+
+          </article>
+
+
+          <article class="service-item">
+
+            <div class="service-number">03</div>
+
+            <div>
+              <h3>پتوز (افتادگی پلک)</h3>
+
+              <p>
+                پتوز به پایین‌تر قرار گرفتن پلک فوقانی نسبت به موقعیت طبیعی
+                گفته می‌شود و ممکن است در یک یا هر دو چشم دیده شود. این مشکل
+                می‌تواند مادرزادی یا اکتسابی باشد و در برخی موارد علاوه بر
+                تغییر ظاهر پلک، میدان دید را نیز محدود کند. در کودکان،
+                افتادگی شدید پلک می‌تواند بر روند تکامل طبیعی بینایی اثرگذار باشد.
+              </p>
+            </div>
+
+            <div class="service-arrow">←</div>
+
+          </article>
+
+
+          <article class="service-item">
+
+            <div class="service-number">04</div>
+
+            <div>
+              <h3>بلفاروپلاستی (جراحی پلک)</h3>
+
+              <p>
+                بلفاروپلاستی روشی جراحی برای اصلاح تغییرات پلک و برداشتن
+                پوست و بافت‌های اضافی در موارد مناسب است. این جراحی می‌تواند
+                با هدف بهبود ظاهر پلک و در برخی شرایط برای کمک به بهبود
+                میدان دید انجام شود. ارزیابی وضعیت پلک‌ها و سلامت چشم پیش
+                از تصمیم‌گیری برای جراحی ضروری است.
+              </p>
+            </div>
+
+            <div class="service-arrow">←</div>
+
+          </article>
+
+
+          <article class="service-item">
+
+            <div class="service-number">05</div>
+
+            <div>
+              <h3>لیزیک (حذف عینک)</h3>
+
+              <p>
+                لیزیک یک روش جراحی لیزری برای اصلاح عیوب انکساری چشم است که
+                با تغییر شکل دقیق قرنیه انجام می‌شود و در افراد مناسب می‌تواند
+                برای اصلاح نزدیک‌بینی، دوربینی و آستیگماتیسم مورد استفاده قرار گیرد.
+                بررسی سلامت چشم، وضعیت قرنیه و ثبات شماره چشم پیش از انجام
+                عمل از مراحل مهم ارزیابی بیمار است.
+              </p>
+            </div>
+
+            <div class="service-arrow">←</div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         POST OP
+    ========================== -->
+
+    <section class="post-op" id="postop">
+
+      <div class="container">
+
+        <div class="post-layout">
+
+          <div class="post-intro">
+
+            <div class="section-kicker">
+              AFTER SURGERY
+            </div>
+
+            <h2 class="section-title">
+              مراقبت‌های بعد از جراحی
+            </h2>
+
+            <p>
+              توصیه‌های دقیق پس از جراحی، بخش مهمی از روند بهبود و رسیدن
+              به نتیجه مطلوب است. اطلاعات این بخش به مرور تکمیل خواهد شد.
+            </p>
+
+          </div>
+
+
+          <div class="post-list">
+
+            <article class="post-card">
+              <h3>
+                مراقبت‌های بعد از جراحی انحراف چشم
+              </h3>
+
+              <p>
+                توصیه‌های تخصصی و دستورالعمل‌های کامل پس از جراحی انحراف چشم
+                در این بخش قرار خواهد گرفت.
+              </p>
+            </article>
+
+
+            <article class="post-card">
+              <h3>
+                مراقبت‌های بعد از جراحی بلفاروپلاستی
+              </h3>
+
+              <p>
+                دستورالعمل‌های مربوط به مراقبت از پلک، مصرف داروها و
+                پیگیری‌های پس از جراحی در این بخش قرار خواهد گرفت.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="faq" id="faq">
+
+      <div class="container">
+
+        <div class="faq-layout">
+
+          <div class="faq-intro">
+
+            <div class="section-kicker">
+              QUESTIONS
+            </div>
+
+            <h2 class="section-title">
+              پرسش و پاسخ
+            </h2>
+
+            <p>
+              پرسش خود را ثبت کنید. پرسش‌ها پس از بررسی و تأیید، در این بخش
+              نمایش داده خواهند شد.
+            </p>
+
+            <form class="question-form" id="questionForm">
+
+              <input
+                id="questionName"
+                class="field"
+                type="text"
+                placeholder="نام شما"
+                required
+              />
+
+              <textarea
+                id="questionText"
+                class="field"
+                placeholder="سؤال خود را بنویسید..."
+                required
+              ></textarea>
+
+              <button class="btn btn-gold" type="submit">
+                ارسال پرسش
+              </button>
+
+            </form>
+
+          </div>
+
+
+          <div>
+
+            <div class="faq-list" id="faqList">
+
+              <div class="faq-item">
+                <div class="faq-q">
+                  چه زمانی برای معاینه چشم کودک مراجعه کنیم؟
+                </div>
+
+                <div class="faq-a">
+                  در صورت مشاهده هرگونه مشکل در دید، انحراف چشم، نزدیک یا دور
+                  نگه داشتن اشیا، شکایت از سردرد یا سایر علائم بینایی،
+                  ارزیابی چشم‌پزشکی می‌تواند اهمیت داشته باشد.
+                </div>
+              </div>
+
+
+              <div class="faq-item">
+                <div class="faq-q">
+                  آیا هر نوع انحراف چشم نیاز به جراحی دارد؟
+                </div>
+
+                <div class="faq-a">
+                  خیر. روش درمان استرابیسم به نوع انحراف، میزان انحراف،
+                  وضعیت بینایی و شرایط هر بیمار بستگی دارد و پس از معاینه
+                  مشخص می‌شود.
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery" id="gallery">
+
+      <div class="container">
+
+        <div class="gallery-head">
+
+          <div>
+            <div class="section-kicker">
+              CLINIC GALLERY
+            </div>
+
+            <h2 class="section-title">
+              گالری تصاویر
+            </h2>
+          </div>
+
+          <div class="gallery-note">
+            تصاویر مطب، پزشک و محیط درمان به مرور در این بخش قرار خواهند گرفت.
+          </div>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-box">
+            <img
+              src="IMG_3386.jpeg"
+              alt="دکتر سمیرا صدرخانلو"
+            />
+          </div>
+
+          <div class="gallery-box">
+            <img
+              src="IMG_3385.jpeg"
+              alt="دکتر سمیرا صدرخانلو"
+            />
+          </div>
+
+          <div class="gallery-box">
+            <div class="gallery-placeholder">
+              تصاویر مطب
+            </div>
+          </div>
+
+          <div class="gallery-box">
+            <div class="gallery-placeholder">
+              تصاویر محیط درمان
+            </div>
+          </div>
+
+          <div class="gallery-box">
+            <div class="gallery-placeholder">
+              تصاویر تکمیلی
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="contact-layout">
+
+          <div class="contact-info">
+
+            <div class="section-kicker">
+              CONTACT
+            </div>
+
+            <h2 class="section-title">
+              تماس با ما
+            </h2>
+
+            <p>
+              جهت رزرو وقت، در ساعات زیر با شماره درج‌شده تماس حاصل فرمایید:
+            </p>
+
+
+            <div class="hours">
+
+              <div class="hours-row">
+                <span>روزهای غیر تعطیل — صبح‌ها</span>
+                <span>از ساعت ۸ تا ۱۲</span>
+              </div>
+
+              <div class="hours-row">
+                <span>روزهای غیر تعطیل — عصرها</span>
+                <span>از ساعت ۱۵ تا ۲۰</span>
+              </div>
+
+              <div class="hours-row">
+                <span>پنجشنبه‌ها</span>
+                <span>از ساعت ۸ تا ۱۲</span>
+              </div>
+
+              <div class="hours-row">
+                <span>جمعه‌ها و ایام تعطیل</span>
+                <span>پاسخگویی نداریم</span>
+              </div>
+
+            </div>
+
+
+            <div class="contact-links">
+
+              <a class="contact-link" href="tel:09306630185">
+
+                <span class="contact-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2
+                      19.79 19.79 0 0 1-8.63-3.07
+                      19.5 19.5 0 0 1-6-6
+                      A19.79 19.79 0 0 1 2.12 4.18
+                      2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                      c.12.9.33 1.78.62 2.63
+                      a2 2 0 0 1-.45 2.11L8 9.73
+                      a16 16 0 0 0 6 6l1.27-1.27
+                      a2 2 0 0 1 2.11-.45
+                      c.85.29 1.73.5 2.63.62
+                      A2 2 0 0 1 22 16.92Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+
+                <span>۰۹۳۰۶۶۳۰۱۸۵</span>
+
+              </a>
+
+
+              <a
+                class="contact-link"
+                href="https://instagram.com/dr.sadrkhanlou"
+                target="_blank"
+                rel="noopener"
+              >
+
+                <span class="contact-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <rect
+                      x="3"
+                      y="3"
+                      width="18"
+                      height="18"
+                      rx="5"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                    />
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                    />
+                    <circle
+                      cx="17.5"
+                      cy="6.5"
+                      r="1"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+
+                <span>dr.sadrkhanlou</span>
+
+              </a>
+
+
+              <div class="contact-link">
+
+                <span class="contact-icon">
+                  📍
+                </span>
+
+                <span>
+                  کرج، خیابان شهید بهشتی، نرسیده به خیابان کسری،
+                  جنب نساجی بروجرد، ساختمان ولیعهدی، طبقه پنجم، واحد ۵۰۱
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-gold"
+                href="https://www.google.com/maps/search/?api=1&query=35.82470,50.98233"
+                target="_blank"
+                rel="noopener"
+                style="margin-top:8px;"
+              >
+                📍 مشاهده موقعیت مطب روی نقشه
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="map-wrap">
+
+            <iframe
+              title="مطب دکتر صدرخانلو"
+              src="https://www.google.com/maps?q=35.82470,50.98233&z=17&output=embed"
+              loading="lazy"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div>
+          <span class="footer-name">
+            مطب دکتر سمیرا صدرخانلو
+          </span>
+          — فوق تخصص کودکان و استرابیسم
+        </div>
+
+        <div>
+          دقت در نگاه، ظرافت در درمان
+        </div>
+
       </div>
 
     </div>
@@ -1746,68 +1795,86 @@
 
 
   <script>
-    /* سال فوتر */
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    /* =========================
+       HEADER SCROLL
+    ========================== */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
 
 
-    /* ---------------- پرسش و پاسخ ---------------- */
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const toggle = document.getElementById("mobileToggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("open");
+      });
+    });
+
+
+    /* =========================
+       FAQ LOCAL STORAGE
+    ========================== */
 
     const form = document.getElementById("questionForm");
-    const list = document.getElementById("qaList");
-    const empty = document.getElementById("qaEmpty");
+    const faqList = document.getElementById("faqList");
 
-    let questions = [];
+    const STORAGE_KEY = "dr_sadrkhanlou_questions";
 
-    try {
-      questions = JSON.parse(
-        localStorage.getItem("sadrkhanlou_questions") || "[]"
-      );
-    } catch(e) {
-      questions = [];
+    function loadQuestions() {
+      const questions =
+        JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+
+      questions
+        .filter(item => item.approved === true)
+        .forEach(item => {
+          addQuestionToPage(item);
+        });
     }
 
+    function addQuestionToPage(item) {
 
-    function renderQuestions(){
+      const wrapper = document.createElement("div");
+      wrapper.className = "faq-item";
 
-      list.innerHTML = "";
+      wrapper.innerHTML = `
+        <div class="faq-q">
+          ${escapeHtml(item.question)}
+        </div>
 
-      if(!questions.length){
-        list.appendChild(empty);
-        return;
-      }
+        <div class="faq-a">
+          ${escapeHtml(item.answer || "پاسخ این پرسش پس از بررسی درج خواهد شد.")}
+        </div>
+      `;
 
-      questions.forEach(function(item){
-
-        const article = document.createElement("article");
-        article.className = "question";
-
-        const name = document.createElement("div");
-        name.className = "question-name";
-        name.textContent = item.name;
-
-        const text = document.createElement("div");
-        text.className = "question-text";
-        text.textContent = item.question;
-
-        const status = document.createElement("span");
-        status.className = "pending";
-        status.textContent = "در انتظار بررسی و تأیید";
-
-        article.appendChild(name);
-        article.appendChild(text);
-        article.appendChild(status);
-
-        list.appendChild(article);
-
-      });
-
+      faqList.appendChild(wrapper);
     }
 
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
 
-    form.addEventListener("submit", function(e){
+    form.addEventListener("submit", (event) => {
 
-      e.preventDefault();
+      event.preventDefault();
 
       const name =
         document.getElementById("questionName").value.trim();
@@ -1815,75 +1882,32 @@
       const question =
         document.getElementById("questionText").value.trim();
 
-      if(!name || !question) return;
+      if (!name || !question) return;
 
+      const questions =
+        JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 
-      questions.unshift({
-        name:name,
-        question:question,
-        date:new Date().toISOString()
+      questions.push({
+        name,
+        question,
+        answer: "",
+        approved: false,
+        createdAt: new Date().toISOString()
       });
 
-
       localStorage.setItem(
-        "sadrkhanlou_questions",
+        STORAGE_KEY,
         JSON.stringify(questions)
       );
 
-
       form.reset();
-      renderQuestions();
 
+      alert(
+        "پرسش شما با موفقیت ثبت شد و پس از بررسی در سایت نمایش داده خواهد شد."
+      );
     });
 
-
-    renderQuestions();
-
-
-    /* ---------------- منوی موبایل ---------------- */
-
-    const mobileMenu =
-      document.getElementById("mobileMenu");
-
-    mobileMenu.addEventListener("click", function(){
-
-      const menu = document.querySelector(".menu");
-
-      if(menu.style.display === "flex"){
-        menu.style.display = "";
-        return;
-      }
-
-      menu.style.position = "absolute";
-      menu.style.top = "78px";
-      menu.style.right = "4%";
-      menu.style.left = "4%";
-      menu.style.padding = "20px";
-      menu.style.display = "flex";
-      menu.style.flexDirection = "column";
-      menu.style.alignItems = "stretch";
-      menu.style.gap = "16px";
-      menu.style.background = "rgba(5,25,42,.96)";
-      menu.style.border = "1px solid rgba(255,255,255,.12)";
-      menu.style.borderRadius = "18px";
-      menu.style.backdropFilter = "blur(18px)";
-      menu.style.boxShadow = "0 20px 50px rgba(0,0,0,.2)";
-
-    });
-
-
-    /* بستن منوی موبایل بعد از انتخاب */
-    document.querySelectorAll(".menu a").forEach(function(link){
-
-      link.addEventListener("click", function(){
-
-        if(window.innerWidth <= 760){
-          document.querySelector(".menu").style.display = "";
-        }
-
-      });
-
-    });
+    loadQuestions();
   </script>
 
 </body>
